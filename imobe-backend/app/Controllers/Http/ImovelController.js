@@ -55,7 +55,7 @@ class ImovelController {
     return imovel
   }
 
-  async destroy ({ params, request, response }) {
+  async apagar ({ params, request, response }) {
     const imovel = await Imovel.findOrFail(params.id)
 
     if(imovel.user_id !== auth.users.id){
